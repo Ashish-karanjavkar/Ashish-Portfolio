@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashish Arun Karanjavkar | Project Controls</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
     header { background: #004080; color: #fff; padding: 2rem; text-align: center; }
+    header h1 { color: #ffffff; }
     main { padding: 2rem; max-width: 900px; margin: auto; }
-    section { margin-bottom: 2rem; }
-    h1, h2 { color: #004080; }
+    section { margin-bottom: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 2rem; }
+    h1, h2 { color: #004080; margin-bottom: 0.5rem; border-bottom: 2px solid #004080; display: inline-block; }
     .project { background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; }
     a { color: #004080; text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -19,7 +20,8 @@
     th { background-color: #f0f0f0; }
     summary h2 { display: inline; margin: 0; }
     summary { cursor: pointer; list-style: none; }
-    #toggle-icon { margin-right: 8px; }
+    #toggle-icon, .toggle-icon { margin-right: 8px; }
+    details > summary { padding: 0.5rem 0; }
   </style>
 </head>
 <body>
@@ -53,25 +55,22 @@
     </section>
 
     <section>
-      <h2>Professional Experience</h2>
-      <h3>Planning Manager – [Company Name]</h3>
-      <p><em>Jan 2020 – Present</em></p>
-      <ul>
-        <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
-        <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
-        <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
-        <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
-      </ul>
+      <details id="experience">
+        <summary><h2><span class="toggle-icon">➕</span> Professional Experience</h2></summary>
+        <h3>Planning Manager – [Company Name]</h3>
+        <p><em>Jan 2020 – Present</em></p>
+        <ul>
+          <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
+          <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
+          <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
+          <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
+        </ul>
+      </details>
     </section>
 
     <section>
       <details id="portfolio">
-        <summary>
-          <h2>
-            <span id="toggle-icon">➕</span> Project Portfolio
-          </h2>
-          <small style="margin-left: 10px; color: gray;">Click to expand/collapse</small>
-        </summary>
+        <summary><h2><span class="toggle-icon">➕</span> Project Portfolio</h2></summary>
         <table>
           <thead>
             <tr>
@@ -92,39 +91,55 @@
               <td>Mechanical, E&I, Inspection</td>
               <td>350,000</td>
             </tr>
-            <!-- Add more rows as needed -->
           </tbody>
         </table>
       </details>
     </section>
 
     <section>
-      <h2>Featured Projects</h2>
+      <details id="reporting">
+        <summary><h2><span class="toggle-icon">➕</span> Reporting</h2></summary>
 
-      <div class="project">
-        <h3>Scope Management Tool (SMT)</h3>
-        <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
-        <p><a href="#">[Demo Video Placeholder]</a></p>
-      </div>
+        <div class="project">
+          <h3>Scope Management Tool (SMT)</h3>
+          <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
+        </div>
 
-      <div class="project">
-        <h3>InventoryWise</h3>
-        <p>Inventory tracking system for PPE, tools, and consumables used in solar plant maintenance, improving control and reporting.</p>
-        <p><a href="#">[Demo Video Placeholder]</a></p>
-      </div>
+        <div class="project">
+          <h3>InventoryWise</h3>
+          <p>Inventory tracking system for PPE, tools, and consumables used in solar plant maintenance, improving control and reporting.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
+        </div>
 
-      <div class="project">
-        <h3>Visitors Management App</h3>
-        <p>Streamlined visitor registration and notification process using PowerApps, SharePoint, and Teams integration.</p>
-        <p><a href="#">[Demo Video Placeholder]</a></p>
-      </div>
+        <div class="project">
+          <h3>Visitors Management App</h3>
+          <p>Streamlined visitor registration and notification process using PowerApps, SharePoint, and Teams integration.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
+        </div>
 
-      <div class="project">
-        <h3>Turnaround Progress Dashboard</h3>
-        <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
-        <p><a href="#">[Power BI Report Placeholder]</a></p>
-      </div>
+        <div class="project">
+          <h3>Turnaround Progress Dashboard</h3>
+          <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
+          <p><a href="#">[Power BI Report Placeholder]</a></p>
+        </div>
 
+      </details>
+    </section>
+
+    <section>
+      <details id="apps">
+        <summary><h2><span class="toggle-icon">➕</span> Apps & Softwares</h2></summary>
+
+        <ul>
+          <li><strong>Primavera P6:</strong> Scheduling & Level 5 planning</li>
+          <li><strong>Power BI:</strong> Real-time dashboards and executive reporting</li>
+          <li><strong>Microsoft PowerApps:</strong> Custom applications for scope management, inventory, and visitor control</li>
+          <li><strong>SharePoint:</strong> Data storage and workflow integration</li>
+          <li><strong>Excel Automation:</strong> VBA & Power Query for planning tools</li>
+        </ul>
+
+      </details>
     </section>
 
     <section>
@@ -134,7 +149,7 @@
 
     <section>
       <h2>Contact</h2>
-      <p><strong>Email:</strong> [YourEmail@example.com]</p>
+      <p><strong>Email:</strong> <a href="mailto:Ashish_karanjavkar@yahoo.co.in">Ashish_karanjavkar@yahoo.co.in</a></p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashish-karanjavkar-5824714a" target="_blank">Ashish Karanjavkar</a></p>
     </section>
   </main>
@@ -144,11 +159,11 @@
   </footer>
 
   <script>
-    const details = document.getElementById('portfolio');
-    const icon = document.getElementById('toggle-icon');
-
-    details.addEventListener('toggle', () => {
-      icon.textContent = details.open ? '➖' : '➕';
+    document.querySelectorAll("details").forEach(detail => {
+      const icon = detail.querySelector(".toggle-icon");
+      detail.addEventListener("toggle", () => {
+        if (icon) icon.textContent = detail.open ? "➖" : "➕";
+      });
     });
   </script>
 </body>
