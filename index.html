@@ -17,8 +17,8 @@
     table { width: 100%; border-collapse: collapse; }
     th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
     th { background-color: #f0f0f0; }
-    summary h2 { display: inline; cursor: pointer; }
-    summary { list-style: none; }
+    summary h2 { display: inline; margin: 0; }
+    summary { cursor: pointer; list-style: none; }
     #toggle-icon { margin-right: 8px; }
   </style>
 </head>
@@ -67,9 +67,9 @@
     <section>
       <details id="portfolio">
         <summary>
-          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
+          <h2>
             <span id="toggle-icon">➕</span> Project Portfolio
-          </span>
+          </h2>
           <small style="margin-left: 10px; color: gray;">Click to expand/collapse</small>
         </summary>
         <table>
