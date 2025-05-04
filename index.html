@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashish Arun Karanjavkar | Project Controls</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -68,33 +68,38 @@
     th {
       background-color: #f0f0f0;
     }
-    summary {
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    .expand-icon {
-      font-size: 1.5rem;
-      color: #004080;
-      margin-right: 0.5rem;
-      transition: transform 0.3s ease;
-    }
-    details[open] .expand-icon::before {
-      content: "➖";
-    }
-    .expand-icon::before {
-      content: "➕";
-    }
-    summary h2 {
+    summary h2, summary span {
       display: inline;
-      margin: 0;
-      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    summary::marker {
+      display: none;
+    }
+    summary::after {
+      content: " (Click to expand/collapse)";
+      color: gray;
+      font-size: 0.9rem;
+    }
+    details > div {
+      margin-top: 1.5rem;
+    }
+    .collapsible-summary {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+    .collapsible-summary:before {
+      content: "➕";
+      font-size: 3rem;
+      margin-right: 10px;
+    }
+    .collapsible-summary.expanded:before {
+      content: "➖";
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 style="color: #fff;">Ashish Arun Karanjavkar</h1>
+    <h1>Ashish Arun Karanjavkar</h1>
     <p>Planning & Project Controls | Mechanical Engineer | Refinery Turnaround Specialist</p>
   </header>
 
@@ -124,15 +129,24 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon"></span><h2>Professional Experience</h2></summary>
+        <summary><span class="collapsible-summary">Professional Experience</span></summary>
         <div>
-          <h3>Planning Manager – Aurex Constructors</h3>
-          <p><em>Jan 2020 – Present</em></p>
+          <h3>Planning & Project Controls Manager – Aurex Constructors</h3>
+          <p><em>Jan 2019 – Present</em></p>
           <ul>
-            <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
-            <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
-            <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
-            <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
+            <li>Leading a team of planners across various disciplines to deliver accurate, efficient, and timely project schedules using tools like Primavera P6.</li>
+            <li>Participating in project kick-off meetings to establish and enforce Aurex planning procedures and align expectations with clients and contractors.</li>
+            <li>Managing the development and maintenance of integrated project schedules and coordinating planning activities across Engineering, Procurement, Construction, and Commissioning functions.</li>
+            <li>Actively identifying, analyzing, and mitigating project delays and disruptions through forensic delay analysis and use of best-practice methodologies.</li>
+            <li>Supporting the preparation and defense of Extension of Time (EoT) and disruption claims, working closely with commercial teams, contractors, and clients.</li>
+            <li>Applying contract knowledge, including NEC3/NEC4 principles, to manage change events, compensation events, and to ensure contractual compliance in project delivery.</li>
+            <li>Monitoring project productivity and progress, preparing detailed reports, and conducting performance analyses to support decision-making and early intervention.</li>
+            <li>Reviewing and auditing schedule outputs from planning staff, ensuring alignment with contractual requirements and project objectives.</li>
+            <li>Mentoring and coaching planning personnel, building a high-performing team and ensuring capability development for future succession.</li>
+            <li>Maintaining planning inputs for use in statistical production analysis and benchmarking across projects.</li>
+            <li>Collaborating cross-functionally to resolve planning and execution issues, reprioritize activities, and realign with evolving project goals.</li>
+            <li>Conducting site visits and engaging in hands-on schedule validation to ensure realism and accuracy.</li>
+            <li>Supporting broader project efforts with a proactive, autonomous approach to problem-solving and continuous improvement.</li>
           </ul>
         </div>
       </details>
@@ -140,7 +154,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon"></span><h2>Project Portfolio</h2></summary>
+        <summary><span class="collapsible-summary">➕ Project Portfolio</span></summary>
         <div>
           <table>
             <thead>
@@ -170,7 +184,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon"></span><h2>Reporting</h2></summary>
+        <summary><span class="collapsible-summary">➕ Reporting</span></summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -181,7 +195,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon"></span><h2>Apps & Softwares</h2></summary>
+        <summary><span class="collapsible-summary">➕ Apps & Softwares</span></summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
