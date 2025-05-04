@@ -16,7 +16,7 @@
     header {
       background: #004080;
       color: #fff;
-      padding: 1.2rem;
+      padding: 1rem 0.5rem;
       text-align: center;
       position: sticky;
       top: 0;
@@ -24,13 +24,13 @@
     }
     main {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
     h1, h2 {
       color: #004080;
@@ -40,7 +40,7 @@
       background: #fff;
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 1.2rem;
+      padding: 1.5rem;
       margin-bottom: 1rem;
     }
     a {
@@ -62,23 +62,41 @@
     }
     th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       text-align: left;
     }
     th {
       background-color: #f0f0f0;
     }
-    summary h2, summary span {
-      display: inline;
+
+    /* Collapsible Sections */
+    details summary {
+      font-size: 1.2rem;
+      font-weight: bold;
       cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-left: 1.5em;
     }
-    summary::marker {
-      display: none;
+    details[open] summary::before {
+      content: "−";
+      position: absolute;
+      left: 0;
+      color: #004080;
+      font-weight: bold;
     }
-    summary::after {
+    details summary::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      color: #004080;
+      font-weight: bold;
+    }
+    details summary::after {
       content: " (Click to expand/collapse)";
       color: gray;
       font-size: 0.9rem;
+      font-weight: normal;
     }
     details > div {
       margin-top: 1rem;
@@ -94,30 +112,19 @@
   <main>
     <section>
       <h2>About Me</h2>
-      <p>
-        🎯 Planning & Project Controls | Mechanical Engineer | Refinery Turnaround & Shutdown Specialization
-      </p>
-      <p>
-        With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds,
+      <p>🎯 Planning & Project Controls | Mechanical Engineer | Refinery Turnaround & Shutdown Specialization</p>
+      <p>With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds,
         shutdown planning, and the development of efficient planning processes and procedures. Currently working as a Planning Manager, I bring a deep understanding of the "Cradle to Grave" methodology for turnaround and maintenance, ensuring seamless execution from initiation to completion.
       </p>
-      <p>
-        🌍 <strong>Global Experience:</strong> My career has taken me across South Africa, Botswana, and Russia, where I’ve contributed to complex projects in diverse environments.
-      </p>
-      <p>
-        💡 <strong>Innovative Solutions:</strong> Highly skilled in Excel, Power BI, and Primavera P6, I’ve spearheaded automation initiatives, developing custom apps to streamline manpower mobilization, asset verification, and reporting.
-      </p>
-      <p>
-        📊 <strong>Expertise in Project Reporting & Estimation:</strong> From project reporting to supporting estimation processes, I excel at delivering insights that drive informed decisions.
-      </p>
-      <p>
-        I thrive on optimizing processes, leveraging technology, and contributing to successful project outcomes.
-      </p>
+      <p>🌍 <strong>Global Experience:</strong> My career has taken me across South Africa, Botswana, and Russia, where I’ve contributed to complex projects in diverse environments.</p>
+      <p>💡 <strong>Innovative Solutions:</strong> Highly skilled in Excel, Power BI, and Primavera P6, I’ve spearheaded automation initiatives, developing custom apps to streamline manpower mobilization, asset verification, and reporting.</p>
+      <p>📊 <strong>Expertise in Project Reporting & Estimation:</strong> From project reporting to supporting estimation processes, I excel at delivering insights that drive informed decisions.</p>
+      <p>I thrive on optimizing processes, leveraging technology, and contributing to successful project outcomes.</p>
     </section>
 
     <section>
       <details>
-        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Professional Experience</span></summary>
+        <summary>Professional Experience</summary>
         <div>
           <h3>Planning Manager – Aurex Constructors</h3>
           <p><em>Jan 2020 – Present</em></p>
@@ -133,7 +140,7 @@
 
     <section>
       <details>
-        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Project Portfolio</span></summary>
+        <summary>Project Portfolio</summary>
         <div>
           <table>
             <thead>
@@ -163,7 +170,7 @@
 
     <section>
       <details>
-        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Reporting</span></summary>
+        <summary>Reporting</summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -174,7 +181,7 @@
 
     <section>
       <details>
-        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Apps & Softwares</span></summary>
+        <summary>Apps & Softwares</summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
