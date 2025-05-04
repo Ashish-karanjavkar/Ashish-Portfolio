@@ -68,22 +68,27 @@
     th {
       background-color: #f0f0f0;
     }
-    summary::marker {
-      display: none;
-    }
-    summary::after {
-      content: " (Click to expand/collapse)";
-      color: gray;
-      font-size: 0.9rem;
-    }
-    details > div {
-      margin-top: 1.5rem;
+    summary {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
     }
     .expand-icon {
-      font-size: 4.8rem;
-      line-height: 1;
-      vertical-align: middle;
+      font-size: 1.5rem;
+      color: #004080;
       margin-right: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    details[open] .expand-icon::before {
+      content: "➖";
+    }
+    .expand-icon::before {
+      content: "➕";
+    }
+    summary h2 {
+      display: inline;
+      margin: 0;
+      font-size: 1.5rem;
     }
   </style>
 </head>
@@ -119,7 +124,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Professional Experience</h2></summary>
+        <summary><span class="expand-icon"></span><h2>Professional Experience</h2></summary>
         <div>
           <h3>Planning Manager – Aurex Constructors</h3>
           <p><em>Jan 2020 – Present</em></p>
@@ -135,7 +140,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Project Portfolio</h2></summary>
+        <summary><span class="expand-icon"></span><h2>Project Portfolio</h2></summary>
         <div>
           <table>
             <thead>
@@ -165,7 +170,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Reporting</h2></summary>
+        <summary><span class="expand-icon"></span><h2>Reporting</h2></summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -176,7 +181,7 @@
 
     <section>
       <details>
-        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Apps & Softwares</h2></summary>
+        <summary><span class="expand-icon"></span><h2>Apps & Softwares</h2></summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
