@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashish Arun Karanjavkar | Project Controls</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Raleway', sans-serif;
@@ -18,9 +18,9 @@
       color: #fff;
       padding: 2rem;
       text-align: center;
-    }
-    header h1 {
-      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
     main {
       padding: 2rem;
@@ -30,7 +30,7 @@
     section {
       margin-bottom: 2rem;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
     h1, h2 {
       color: #004080;
@@ -70,23 +70,19 @@
     }
     summary h2 {
       display: inline;
-      margin: 0;
+      cursor: pointer;
     }
     summary {
-      cursor: pointer;
       list-style: none;
     }
-    .toggle-icon {
+    #toggle-icon {
       margin-right: 8px;
-    }
-    details > summary {
-      padding: 0.5rem 0;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ashish Arun Karanjavkar</h1>
+    <h1 style="color: #fff;">Ashish Arun Karanjavkar</h1>
     <p>Planning & Project Controls | Mechanical Engineer | Refinery Turnaround Specialist</p>
   </header>
 
@@ -115,22 +111,33 @@
     </section>
 
     <section>
-      <details id="experience">
-        <summary><h2><span class="toggle-icon">➕</span> Professional Experience</h2></summary>
-        <h3>Planning Manager – [Company Name]</h3>
-        <p><em>Jan 2020 – Present</em></p>
-        <ul>
-          <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
-          <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
-          <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
-          <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
-        </ul>
+      <details>
+        <summary>
+          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
+            <span>➕</span> Professional Experience
+          </span>
+        </summary>
+        <div style="margin-top: 1rem;">
+          <h3>Planning Manager – [Company Name]</h3>
+          <p><em>Jan 2020 – Present</em></p>
+          <ul>
+            <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
+            <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
+            <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
+            <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
+          </ul>
+        </div>
       </details>
     </section>
 
     <section>
       <details id="portfolio">
-        <summary><h2><span class="toggle-icon">➕</span> Project Portfolio</h2></summary>
+        <summary>
+          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
+            <span id="toggle-icon">➕</span> Project Portfolio
+          </span>
+          <small style="margin-left: 10px; color: gray;">Click to expand/collapse</small>
+        </summary>
         <table>
           <thead>
             <tr>
@@ -157,9 +164,27 @@
     </section>
 
     <section>
-      <details id="reporting">
-        <summary><h2><span class="toggle-icon">➕</span> Reporting</h2></summary>
+      <details>
+        <summary>
+          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
+            <span>➕</span> Reporting
+          </span>
+        </summary>
+        <div class="project">
+          <h3>Turnaround Progress Dashboard</h3>
+          <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
+          <p><a href="#">[Power BI Report Placeholder]</a></p>
+        </div>
+      </details>
+    </section>
 
+    <section>
+      <details>
+        <summary>
+          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
+            <span>➕</span> Apps & Softwares
+          </span>
+        </summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
@@ -177,28 +202,6 @@
           <p>Streamlined visitor registration and notification process using PowerApps, SharePoint, and Teams integration.</p>
           <p><a href="#">[Demo Video Placeholder]</a></p>
         </div>
-
-        <div class="project">
-          <h3>Turnaround Progress Dashboard</h3>
-          <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
-          <p><a href="#">[Power BI Report Placeholder]</a></p>
-        </div>
-
-      </details>
-    </section>
-
-    <section>
-      <details id="apps">
-        <summary><h2><span class="toggle-icon">➕</span> Apps & Softwares</h2></summary>
-
-        <ul>
-          <li><strong>Primavera P6:</strong> Scheduling & Level 5 planning</li>
-          <li><strong>Power BI:</strong> Real-time dashboards and executive reporting</li>
-          <li><strong>Microsoft PowerApps:</strong> Custom applications for scope management, inventory, and visitor control</li>
-          <li><strong>SharePoint:</strong> Data storage and workflow integration</li>
-          <li><strong>Excel Automation:</strong> VBA & Power Query for planning tools</li>
-        </ul>
-
       </details>
     </section>
 
@@ -210,7 +213,7 @@
     <section>
       <h2>Contact</h2>
       <p><strong>Email:</strong> <a href="mailto:Ashish_karanjavkar@yahoo.co.in">Ashish_karanjavkar@yahoo.co.in</a></p>
-      <p><strong>Phone:</strong> <a href="tel:+27833372757">+27 83 337 2757</a></p>
+      <p><strong>Phone:</strong> +27 83 337 2757</p>
       <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ashish-karanjavkar-5824714a" target="_blank">Ashish Karanjavkar</a></p>
     </section>
   </main>
@@ -220,11 +223,11 @@
   </footer>
 
   <script>
-    document.querySelectorAll("details").forEach(detail => {
-      const icon = detail.querySelector(".toggle-icon");
-      detail.addEventListener("toggle", () => {
-        if (icon) icon.textContent = detail.open ? "➖" : "➕";
-      });
+    const details = document.getElementById('portfolio');
+    const icon = document.getElementById('toggle-icon');
+
+    details.addEventListener('toggle', () => {
+      icon.textContent = details.open ? '➖' : '➕';
     });
   </script>
 </body>
