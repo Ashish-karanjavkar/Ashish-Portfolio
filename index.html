@@ -35,7 +35,7 @@
     h1, h2 {
       color: #004080;
       margin-bottom: 0.5rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
     .project {
       background: #fff;
@@ -76,22 +76,30 @@
     summary::marker {
       display: none;
     }
+    summary::after {
+      content: " (Click to expand/collapse)";
+      color: gray;
+      font-size: 0.9rem;
+    }
     details > div {
       margin-top: 1.5rem;
     }
     .collapsible-summary {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: bold;
     }
-    .collapsible-summary:before {
-      content: "➕";
-      color: green;
-      font-size: 1.5rem;
-      margin-right: 10px;
-    }
-    .collapsible-summary.expanded:before {
+    details[open] summary span {
       content: "➖";
       color: orange;
+    }
+    details:not([open]) summary span {
+      content: "➕";
+      color: green;
+    }
+    details summary::before {
+      content: none;
+    }
+    summary span {
       font-size: 1.5rem;
     }
   </style>
@@ -106,29 +114,21 @@
     <section>
       <h2>About Me</h2>
       <p>🎯 Planning & Project Controls | Mechanical Engineer | Refinery Turnaround & Shutdown Specialization</p>
-      <p>With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds, shutdown planning, and the development of efficient planning processes and procedures.</p>
+      <p>With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds, shutdown planning, and the development of efficient planning processes and procedures. I work across industrial projects, applying my skills to deliver high-quality scheduling, risk analysis, and performance tracking that optimize project delivery timelines. My background also includes managing multidisciplinary teams to ensure accurate, on-time project schedules and cost control, which improves project performance and supports operational excellence.</p>
     </section>
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">Professional Experience</span></summary>
+        <summary><span class="collapsible-summary">➕ Professional Experience</span></summary>
         <div>
           <h3>Planning & Project Controls Manager – Aurex Constructors</h3>
           <p><em>Jan 2019 – Present</em></p>
           <ul>
             <li>Leading a team of planners across various disciplines to deliver accurate, efficient, and timely project schedules using tools like Primavera P6.</li>
-            <li>Participating in project kick-off meetings to establish and enforce Aurex planning procedures and align expectations with clients and contractors.</li>
-            <li>Managing the development and maintenance of integrated project schedules and coordinating planning activities across Engineering, Procurement, Construction, and Commissioning functions.</li>
-            <li>Actively identifying, analyzing, and mitigating project delays and disruptions through forensic delay analysis and use of best-practice methodologies.</li>
-            <li>Supporting the preparation and defense of Extension of Time (EoT) and disruption claims, working closely with commercial teams, contractors, and clients.</li>
-            <li>Applying contract knowledge, including NEC3/NEC4 principles, to manage change events, compensation events, and to ensure contractual compliance in project delivery.</li>
-            <li>Monitoring project productivity and progress, preparing detailed reports, and conducting performance analyses to support decision-making and early intervention.</li>
-            <li>Reviewing and auditing schedule outputs from planning staff, ensuring alignment with contractual requirements and project objectives.</li>
-            <li>Mentoring and coaching planning personnel, building a high-performing team and ensuring capability development for future succession.</li>
-            <li>Maintaining planning inputs for use in statistical production analysis and benchmarking across projects.</li>
-            <li>Collaborating cross-functionally to resolve planning and execution issues, reprioritize activities, and realign with evolving project goals.</li>
-            <li>Conducting site visits and engaging in hands-on schedule validation to ensure realism and accuracy.</li>
-            <li>Supporting broader project efforts with a proactive, autonomous approach to problem-solving and continuous improvement.</li>
+            <li>Participating in project kick-off meetings to establish and enforce planning procedures and align expectations with clients and contractors.</li>
+            <li>Managing integrated project schedules and coordinating planning activities across multiple functions.</li>
+            <li>Supporting Extension of Time claims and conducting forensic delay analysis.</li>
+            <li>Monitoring project progress, preparing reports, and conducting performance analyses.</li>
           </ul>
         </div>
       </details>
@@ -136,7 +136,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">Project Portfolio</span></summary>
+        <summary><span class="collapsible-summary">➕ Project Portfolio</span></summary>
         <div>
           <table>
             <thead>
@@ -160,6 +160,38 @@
               </tr>
             </tbody>
           </table>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <details>
+        <summary><span class="collapsible-summary">➕ Reporting</span></summary>
+        <div class="project">
+          <h3>Turnaround Progress Dashboard</h3>
+          <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
+          <p><a href="#">[Power BI Report Placeholder]</a></p>
+        </div>
+      </details>
+    </section>
+
+    <section>
+      <details>
+        <summary><span class="collapsible-summary">➕ Apps & Softwares</span></summary>
+        <div class="project">
+          <h3>Scope Management Tool (SMT)</h3>
+          <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
+        </div>
+        <div class="project">
+          <h3>InventoryWise</h3>
+          <p>Inventory tracking system for PPE, tools, and consumables used in solar plant maintenance, improving control and reporting.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
+        </div>
+        <div class="project">
+          <h3>Visitors Management App</h3>
+          <p>Streamlined visitor registration and notification process using PowerApps, SharePoint, and Teams integration.</p>
+          <p><a href="#">[Demo Video Placeholder]</a></p>
         </div>
       </details>
     </section>
