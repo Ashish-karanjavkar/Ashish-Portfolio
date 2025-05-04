@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ashish Arun Karanjavkar | Project Controls</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -68,10 +68,6 @@
     th {
       background-color: #f0f0f0;
     }
-    summary h2, summary span {
-      display: inline;
-      cursor: pointer;
-    }
     summary::marker {
       display: none;
     }
@@ -83,9 +79,11 @@
     details > div {
       margin-top: 1.5rem;
     }
-    .collapsible-summary {
-      font-size: 4.8rem; /* Icon size doubled */
-      font-weight: bold;
+    .expand-icon {
+      font-size: 4.8rem;
+      line-height: 1;
+      vertical-align: middle;
+      margin-right: 0.5rem;
     }
   </style>
 </head>
@@ -121,7 +119,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Professional Experience</span></summary>
+        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Professional Experience</h2></summary>
         <div>
           <h3>Planning Manager – Aurex Constructors</h3>
           <p><em>Jan 2020 – Present</em></p>
@@ -137,7 +135,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Project Portfolio</span></summary>
+        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Project Portfolio</h2></summary>
         <div>
           <table>
             <thead>
@@ -167,7 +165,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Reporting</span></summary>
+        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Reporting</h2></summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -178,7 +176,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Apps & Softwares</span></summary>
+        <summary><span class="expand-icon">➕</span> <h2 style="display:inline;">Apps & Softwares</h2></summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
