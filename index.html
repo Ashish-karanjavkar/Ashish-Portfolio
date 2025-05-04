@@ -24,7 +24,7 @@
     }
     main {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
     }
     section {
@@ -40,7 +40,7 @@
       background: #fff;
       border: 1px solid #ccc;
       border-radius: 8px;
-      padding: 1rem;
+      padding: 1.2rem;
       margin-bottom: 1rem;
     }
     a {
@@ -68,15 +68,20 @@
     th {
       background-color: #f0f0f0;
     }
-    summary h2 {
+    summary h2, summary span {
       display: inline;
       cursor: pointer;
     }
-    summary {
-      list-style: none;
+    summary::marker {
+      display: none;
     }
-    #toggle-icon {
-      margin-right: 8px;
+    summary::after {
+      content: " (Click to expand/collapse)";
+      color: gray;
+      font-size: 0.9rem;
+    }
+    details > div {
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -112,13 +117,9 @@
 
     <section>
       <details>
-        <summary>
-          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
-            <span>➕</span> Professional Experience
-          </span>
-        </summary>
-        <div style="margin-top: 1rem;">
-          <h3>Planning Manager – [Company Name]</h3>
+        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Professional Experience</span></summary>
+        <div>
+          <h3>Planning Manager – Aurex Constructors</h3>
           <p><em>Jan 2020 – Present</em></p>
           <ul>
             <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
@@ -131,45 +132,38 @@
     </section>
 
     <section>
-      <details id="portfolio">
-        <summary>
-          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
-            <span id="toggle-icon">➕</span> Project Portfolio
-          </span>
-          <small style="margin-left: 10px; color: gray;">Click to expand/collapse</small>
-        </summary>
-        <table>
-          <thead>
-            <tr>
-              <th>Project Name</th>
-              <th>Location</th>
-              <th>Timeline</th>
-              <th>Peak Manpower</th>
-              <th>Schedule Activities</th>
-              <th>Project Manhours</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>XYZ Turnaround</td>
-              <td>South Africa</td>
-              <td>Jan 2023 – Jul 2023</td>
-              <td>1,200</td>
-              <td>Mechanical, E&I, Inspection</td>
-              <td>350,000</td>
-            </tr>
-          </tbody>
-        </table>
+      <details>
+        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Project Portfolio</span></summary>
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Location</th>
+                <th>Timeline</th>
+                <th>Peak Manpower</th>
+                <th>Schedule Activities</th>
+                <th>Project Manhours</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>XYZ Turnaround</td>
+                <td>Cape Town, South Africa</td>
+                <td>Jan 2023 – Jul 2023</td>
+                <td>1,200</td>
+                <td>Mechanical, E&I, Inspection</td>
+                <td>350,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </details>
     </section>
 
     <section>
       <details>
-        <summary>
-          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
-            <span>➕</span> Reporting
-          </span>
-        </summary>
+        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Reporting</span></summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -180,23 +174,17 @@
 
     <section>
       <details>
-        <summary>
-          <span style="font-size: 1.2rem; font-weight: bold; cursor: pointer;">
-            <span>➕</span> Apps & Softwares
-          </span>
-        </summary>
+        <summary><span style="font-size: 1.2rem; font-weight: bold;">➕ Apps & Softwares</span></summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
           <p><a href="#">[Demo Video Placeholder]</a></p>
         </div>
-
         <div class="project">
           <h3>InventoryWise</h3>
           <p>Inventory tracking system for PPE, tools, and consumables used in solar plant maintenance, improving control and reporting.</p>
           <p><a href="#">[Demo Video Placeholder]</a></p>
         </div>
-
         <div class="project">
           <h3>Visitors Management App</h3>
           <p>Streamlined visitor registration and notification process using PowerApps, SharePoint, and Teams integration.</p>
@@ -221,14 +209,5 @@
   <footer>
     &copy; 2025 Ashish Arun Karanjavkar. All rights reserved.
   </footer>
-
-  <script>
-    const details = document.getElementById('portfolio');
-    const icon = document.getElementById('toggle-icon');
-
-    details.addEventListener('toggle', () => {
-      icon.textContent = details.open ? '➖' : '➕';
-    });
-  </script>
 </body>
 </html>
