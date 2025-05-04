@@ -16,7 +16,7 @@
     header {
       background: #004080;
       color: #fff;
-      padding: 0.8rem;
+      padding: 1rem 0.5rem;
       text-align: center;
       position: sticky;
       top: 0;
@@ -28,21 +28,20 @@
       margin: auto;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
       border-bottom: 1px solid #ccc;
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
     h1, h2 {
       color: #004080;
       margin-bottom: 0.5rem;
-      font-size: 2rem;
     }
     .project {
       background: #fff;
       border: 1px solid #ccc;
       border-radius: 8px;
       padding: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
     a {
       color: #004080;
@@ -63,50 +62,50 @@
     }
     th, td {
       border: 1px solid #ccc;
-      padding: 8px;
+      padding: 10px;
       text-align: left;
     }
     th {
       background-color: #f0f0f0;
     }
-    summary h2, summary span {
-      display: inline;
+
+    /* Collapsible Sections */
+    details summary {
+      font-size: 1.2rem;
+      font-weight: bold;
       cursor: pointer;
+      list-style: none;
+      position: relative;
+      padding-left: 1.5em;
     }
-    summary::marker {
-      display: none;
+    details[open] summary::before {
+      content: "−";
+      position: absolute;
+      left: 0;
+      color: #004080;
+      font-weight: bold;
     }
-    summary::after {
+    details summary::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      color: #004080;
+      font-weight: bold;
+    }
+    details summary::after {
       content: " (Click to expand/collapse)";
       color: gray;
       font-size: 0.9rem;
+      font-weight: normal;
     }
     details > div {
-      margin-top: 1.5rem;
-    }
-    .collapsible-summary {
-      font-size: 1.8rem;
-      font-weight: bold;
-    }
-    details[open] summary span {
-      content: "➖";
-      color: orange;
-    }
-    details:not([open]) summary span {
-      content: "➕";
-      color: green;
-    }
-    details summary::before {
-      content: none;
-    }
-    summary span {
-      font-size: 1.5rem;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Ashish Arun Karanjavkar</h1>
+    <h1 style="color: #fff;">Ashish Arun Karanjavkar</h1>
     <p>Planning & Project Controls | Mechanical Engineer | Refinery Turnaround Specialist</p>
   </header>
 
@@ -114,21 +113,26 @@
     <section>
       <h2>About Me</h2>
       <p>🎯 Planning & Project Controls | Mechanical Engineer | Refinery Turnaround & Shutdown Specialization</p>
-      <p>With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds, shutdown planning, and the development of efficient planning processes and procedures. I work across industrial projects, applying my skills to deliver high-quality scheduling, risk analysis, and performance tracking that optimize project delivery timelines. My background also includes managing multidisciplinary teams to ensure accurate, on-time project schedules and cost control, which improves project performance and supports operational excellence.</p>
+      <p>With more than 15 years of expertise in planning and project control, I specialize in refinery turnarounds,
+        shutdown planning, and the development of efficient planning processes and procedures. Currently working as a Planning Manager, I bring a deep understanding of the "Cradle to Grave" methodology for turnaround and maintenance, ensuring seamless execution from initiation to completion.
+      </p>
+      <p>🌍 <strong>Global Experience:</strong> My career has taken me across South Africa, Botswana, and Russia, where I’ve contributed to complex projects in diverse environments.</p>
+      <p>💡 <strong>Innovative Solutions:</strong> Highly skilled in Excel, Power BI, and Primavera P6, I’ve spearheaded automation initiatives, developing custom apps to streamline manpower mobilization, asset verification, and reporting.</p>
+      <p>📊 <strong>Expertise in Project Reporting & Estimation:</strong> From project reporting to supporting estimation processes, I excel at delivering insights that drive informed decisions.</p>
+      <p>I thrive on optimizing processes, leveraging technology, and contributing to successful project outcomes.</p>
     </section>
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Professional Experience</span></summary>
+        <summary>Professional Experience</summary>
         <div>
-          <h3>Planning & Project Controls Manager – Aurex Constructors</h3>
-          <p><em>Jan 2019 – Present</em></p>
+          <h3>Planning Manager – Aurex Constructors</h3>
+          <p><em>Jan 2020 – Present</em></p>
           <ul>
-            <li>Leading a team of planners across various disciplines to deliver accurate, efficient, and timely project schedules using tools like Primavera P6.</li>
-            <li>Participating in project kick-off meetings to establish and enforce planning procedures and align expectations with clients and contractors.</li>
-            <li>Managing integrated project schedules and coordinating planning activities across multiple functions.</li>
-            <li>Supporting Extension of Time claims and conducting forensic delay analysis.</li>
-            <li>Monitoring project progress, preparing reports, and conducting performance analyses.</li>
+            <li>Lead planning for refinery turnarounds and shutdowns, managing full lifecycle from scope definition to execution.</li>
+            <li>Develop detailed Level 5 schedules in Primavera P6 covering mechanical, E&I, and inspection work scopes.</li>
+            <li>Automated reporting processes using Power BI, reducing manual reporting time by 40%.</li>
+            <li>Coordinated daily planning meetings with discipline leads and contractors to track and align progress.</li>
           </ul>
         </div>
       </details>
@@ -136,7 +140,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Project Portfolio</span></summary>
+        <summary>Project Portfolio</summary>
         <div>
           <table>
             <thead>
@@ -166,7 +170,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Reporting</span></summary>
+        <summary>Reporting</summary>
         <div class="project">
           <h3>Turnaround Progress Dashboard</h3>
           <p>Power BI dashboard to monitor live progress, cost, and resource data during shutdown execution.</p>
@@ -177,7 +181,7 @@
 
     <section>
       <details>
-        <summary><span class="collapsible-summary">➕ Apps & Softwares</span></summary>
+        <summary>Apps & Softwares</summary>
         <div class="project">
           <h3>Scope Management Tool (SMT)</h3>
           <p>A PowerApps-based application built to automate scope planning, BOQ generation, and P6 data export for Oil & Gas turnarounds.</p>
